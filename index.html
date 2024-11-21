@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Kerry Mercy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" src="mercy.jpg" style="width: 96px; height: 96px;">
+    <style>
+        body {
+           
+            
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Heart Container */
+        .heart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+        }
+
+        /* Heart shape */
+        .heart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            background-color: transparent; /* Heart color */
+            position: absolute;
+            border: 5px solid #f52308;
+            border-top: none;
+            background-color: red;
+            
+            
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            border-radius: 40px 40px 0 0;
+            animation: pumpHeart 1s ease-in-out infinite;
+        }
+
+        .heart:before, .heart:after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 5px solid #f52308;
+            background-color: red;
+            
+            
+        }
+
+        .heart:before {
+            top: -75px;
+            left: 0;
+        }
+
+        .heart:after {
+            top: 0;
+            left: 75px;
+        }
+
+        /* Animation for the pumping heart effect */
+        @keyframes pumpHeart {
+            0%, 100% {
+                transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) rotate(-45deg) scale(1.1);
+            }
+        }
+
+        /* Birthday Message */
+        .message {
+            text-align: center;
+            top: 10px;
+            bottom: 0;
+            font-size: 24px;
+            color: #ff3366;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            opacity: 0;
+            animation: messageAppear 3s ease-in-out forwards;
+            margin-top: 50px;
+            margin-bottom: 0px;
+        }
+
+        /* Animation for the birthday message */
+        @keyframes messageAppear {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button to trigger the message visibility */
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff3366;
+            color:transparent;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e02956;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart-container">
+        <div class="heart"></div>
+    </div>
+        <div class="message" style="text-shadow: 2px 2px 0px rgb(102, 13, 219);font-size: 30px;">Happy Birthday, Kerry Mercy! 🎉🎂</div>
+    
+
+    <button class="btn" id="showMessageBtn" style="background-color: transparent;color: black;text-align: center;text-align: center;" >Click the text above to See Birthday Message <img src="ar.png"></img></button>
+
+    <script>
+        // JavaScript to show the birthday message on click
+        document.getElementById('showMessageBtn').addEventListener('click', function() {
+            const message = document.querySelector('.message');
+            message.style.opacity = '1';
+            message.style.transform = 'translateY(0)';
+        });
+       
+        const messageElement = document.querySelector('.message');
+    
+    // Add event listener to trigger on click
+    messageElement.addEventListener('click', function() {
+        // Change the content of the message when clicked
+        this.innerHTML = 'I Wish you a Bright years ahead my dear, Kerry Mercy! I wish you more years';
+        
+        // Set a timeout to remove the message after 5 seconds (5000 milliseconds)
+        setTimeout(() => {
+            this.innerHTML = '';  // Clear the message after 5 seconds
+        }, 10000);
+    });
+    </script>
+<div>
+    <marquee behavior="" direction="left" style="background-color: transparent;font-size: 45px; margin-bottom: 0px;margin-top: 50px;color: wheat;">
+        "Happy Birthday, my dear! You make every moment brighter</marquee>
+</div>
+<div class="harmonize" id="background-audio">
+    <audio controls autoplay  style="margin:auto;">
+    <source src="Harmonize - Happy Birthday ( Official Music Video) - Harmonize (youtube).mp3">
+    </audio>
+</div>
+<div class="message"></div>
+    <span style="font-size: 30px; color: #eccdc983;color
+: rgb(14, 53, 226); margin-left: 100vh;">Enjoy the Music! 🎶</span>
+  </div>
+  
+</body>
+</html>

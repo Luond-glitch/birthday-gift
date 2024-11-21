@@ -1,0 +1,18 @@
+body{
+    background-image: url(mercy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+}
+@media (max-width: 768px) {
+    img {
+      max-width: 90%;  /* Image width will be 90% on small screens */
+    }
+  }
+  .harmonize{
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
